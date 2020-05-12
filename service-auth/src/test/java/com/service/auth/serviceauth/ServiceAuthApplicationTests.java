@@ -13,7 +13,7 @@ public class ServiceAuthApplicationTests {
     @Test
     public void contextLoads() {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        String encode = bCryptPasswordEncoder.encode("123");
+        String encode = bCryptPasswordEncoder.encode("Secret");
         System.out.println(encode);
     }
 
