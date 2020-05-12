@@ -1,24 +1,28 @@
 package com.service.auth.serviceauth.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.security.Principal;
-
 @RestController
-@RequestMapping("/users")
 public class UserController {
 
-    Logger logger = LoggerFactory.getLogger(UserController.class);
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello security";
+    }
 
-    @RequestMapping(value = "/current", method = RequestMethod.GET)
-    public Principal getUser(Principal principal) {
-        logger.info(">>>>>>>>>>>>>>>>>>>>>>>>");
-        logger.info(principal.toString());
-        logger.info(">>>>>>>>>>>>>>>>>>>>>>>>");
-        return principal;
+    @GetMapping("/admin/hello")
+    public String admin() {
+        return "hello admin";
+    }
+
+    @GetMapping("/dba/hello")
+    public String dba() {
+        return "hello dba";
+    }
+
+    @GetMapping("/user/hello")
+    public String user() {
+        return "hello user";
     }
 }

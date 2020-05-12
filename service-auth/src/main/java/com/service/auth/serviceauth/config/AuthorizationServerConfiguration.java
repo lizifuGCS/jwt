@@ -1,3 +1,4 @@
+/*
 package com.service.auth.serviceauth.config;
 
 import com.service.auth.serviceauth.dto.UserServiceDetail;
@@ -113,3 +114,4 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .checkTokenAccess("isAuthenticated()");
     }
 }
+*/
